@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cohort NYC</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Cohort NYC</h1>
+        <nav>
+            <ul>
+                <li><a href="#explore-section" onclick="navigateToSection('explore-section')">Explore</a></li>
+                <li><a href="#cohort-section" onclick="navigateToSection('cohort-section')">The Cohort</a></li>
+                <li><a href="#colab-section" onclick="navigateToSection('colab-section')">Co-Lab</a></li>
+                <li><a href="#shop-section" onclick="navigateToSection('shop-section')">Shop</a></li>
+                <li><a href="#" id="profile-icon" onclick="toggleDropdown()">Profile</a>
+                    <ul id="profile-dropdown" class="dropdown hidden">
+                        <li><a href="#profile-section" onclick="navigateToSection('profile-section')">Profile</a></li>
+                        <li><a href="#settings-section" onclick="navigateToSection('settings-section')">Settings</a></li>
+                        <li><a href="#more-options-section" onclick="navigateToSection('more-options-section')">More Options</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Sign Up Section -->
+        <section id="signup-section">
+            <form id="signup-form">
+                <h2>Sign Up</h2>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="text" name="name" placeholder="Name" required>
+                <textarea name="bio" placeholder="Bio"></textarea>
+                <input type="file" name="profile-photo">
+                <input type="text" name="profession" placeholder="Profession">
+                <input type="text" name="contacts" placeholder="Contacts">
+                <button type="submit">Sign Up</button>
+            </form>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile-section" class="hidden">
+            <form id="profile-form">
+                <h2>Edit Profile</h2>
+                <input type="text" name="name" placeholder="Name" required>
+                <textarea name="bio" placeholder="Bio"></textarea>
+                <input type="file" name="profile-photo">
+                <input type="text" name="profession" placeholder="Profession">
+                <button type="submit">Update Profile</button>
+            </form>
+            <div class="personal-highlights">
+                <h2>Personal Highlights</h2>
+                <form id="personal-highlights-form">
+                    <textarea name="highlights" placeholder="Add your highlights"></textarea>
+                    <button type="submit">Save Highlights</button>
+                </form>
+            </div>
+            <div class="career-goals">
+                <h2>Career Goals</h2>
+                <form id="career-goals-form">
+                    <textarea name="career-goals" placeholder="Describe your career goals"></textarea>
+                    <button type="submit">Save Goals</button>
+                </form>
+            </div>
+            <div class="personal-aspirations">
+                <h2>Personal Aspirations</h2>
+                <form id="personal-aspirations-form">
+                    <textarea name="personal-aspirations" placeholder="Describe your personal aspirations"></textarea>
+                    <button type="submit">Save Aspirations</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Jobs Section -->
+        <section id="jobs-section" class="hidden">
+            <form id="job-post-form">
+                <h2>Post a Job</h2>
+                <input type="text" name="title" placeholder="Job Title" required>
+                <textarea name="description" placeholder="Job Description"></textarea>
+                <input type="text" name="budget" placeholder="Budget">
+                <input type="date" name="deadline" placeholder="Deadline">
+                <button type="submit">Post Job</button>
+            </form>
+            <div class="job-listings">
+                <h2>Available Jobs</h2>
+                <!-- Jobs will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services-section" class="hidden">
+            <form id="service-list-form">
+                <h2>List a Service</h2>
+                <input type="text" name="service-name" placeholder="Service Name" required>
+                <textarea name="service-description" placeholder="Service Description"></textarea>
+                <input type="text" name="service-price" placeholder="Service Price">
+                <button type="submit">List Service</button>
+            </form>
+            <div class="service-listings">
+                <h2>Available Services</h2>
+                <!-- Services will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products-section" class="hidden">
+            <form id="product-list-form">
+                <h2>List a Product</h2>
+                <input type="text" name="product-name" placeholder="Product Name" required>
+                <textarea name="product-description" placeholder="Product Description"></textarea>
+                <input type="text" name="product-price" placeholder="Product Price">
+                <input type="file" name="product-image">
+                <button type="submit">List Product</button>
+            </form>
+            <div class="product-listings">
+                <h2>Available Products</h2>
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- Messages Section -->
+        <section id="messages-section" class="hidden">
+            <form id="message-form">
+                <h2>Send a Message</h2>
+                <input type="text" name="recipient" placeholder="Recipient" required>
+                <textarea name="message-content" placeholder="Message Content"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="message-list">
+                <h2>Messages</h2>
+                <!-- Messages will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- Explore Section -->
+        <section id="explore-section" class="hidden">
+            <div class="upcoming-events">
+                <h2>Upcoming Events</h2>
+                <!-- Events will be dynamically loaded here -->
+            </div>
+            <div class="user-feed">
+                <h2>User Feed</h2>
+                <!-- User feed with recommended posts/members will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- Networking Section -->
+        <section id="networking-section" class="hidden">
+            <form id="networking-events-form">
+                <h2>Networking Events</h2>
+                <textarea name="networking-events" placeholder="Describe networking events"></textarea>
+                <button type="submit">Save Events</button>
+            </form>
+            <div class="networking-list">
+                <h2>Upcoming Networking Events</h2>
+                <!-- Networking events will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements-section" class="hidden">
+            <form id="achievements-form">
+                <h2>User Achievements</h2>
+                <textarea name="achievements" placeholder="Describe your achievements"></textarea>
+                <button type="submit">Save Achievements</button>
+            </form>
+            <div class="achievements-list">
+                <h2>Achievements</h2>
+                <!-- Achievements will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- Co-Lab Section -->
+        <section id="colab-section" class="hidden">
+            <form id="colab-form">
+                <h2>Post a Collaboration Request</h2>
+                <input type="text" name="colab-title" placeholder="Collaboration Title" required>
+                <textarea name="colab-description" placeholder="Collaboration Description"></textarea>
+                <input type="text" name="colab-budget" placeholder="Budget">
+                <input type="date" name="colab-deadline" placeholder="Deadline">
+                <button type="submit">Post Collaboration</button>
+            </form>
+            <div class="colab-listings">
+                <h2>Available Collaborations</h2>
+                <!-- Collaborations will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- The Cohort Section -->
+        <section id="cohort-section" class="hidden">
+            <div class="cohort-list">
+                <h2>The Cohort</h2>
+                <!-- Cohort members will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- Shop Section -->
+        <section id="shop-section" class="hidden">
+            <div class="product-listings">
+                <h2>Available Products</h2>
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- Settings Section -->
+        <section id="settings-section" class="hidden">
+            <h2>Settings</h2>
+            <!-- Settings form will be here -->
+        </section>
+
+        <!-- More Options Section -->
+        <section id="more-options-section" class="hidden">
+            <h2>More Options</h2>
+            <!-- Additional options will be here -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Cohort NYC</p>
+    </footer>
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>
