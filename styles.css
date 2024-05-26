@@ -1,0 +1,399 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: #333;
+    animation: rainbow 10s infinite alternate;
+}
+
+header, footer {
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    animation: fadeInDown 1s ease-out;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    animation: fadeInUp 1s ease-out;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: white;
+    color: #333;
+    border-radius: 5px;
+}
+
+main {
+    padding: 40px 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+section {
+    margin-bottom: 40px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #007BFF;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #f5f7fa;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    animation: fadeInUp 1s ease-out;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+    box-shadow: 0 0 5px #007BFF;
+    outline: none;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    opacity: 0.9;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    animation: slideInRight 0.5s ease-out;
+}
+
+.notification.success {
+    background-color: #28a745;
+}
+
+.notification.info {
+    background-color: #17a2b8;
+}
+
+.notification.error {
+    background-color: #dc3545;
+}
+
+/* Additional styles for Explore section */
+.trending-articles, .popular-services, .featured-creators, .upcoming-events,
+.networking-list, .achievements-list, .job-listings, .service-listings,
+.product-listings, .message-list, .career-highlights-list, .personal-reflections-list,
+.professional-reflections-list, .industry-experience-list, .personal-achievements-list,
+.user-goals-list, .professional-goals-list, .professional-summary-list, .community-highlights-list,
+.client-feedback-list, .career-milestones-list, .colab-listings, .cohort-list {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.item, .article-item, .service-item, .creator-item, .event-item, .networking-item,
+.achievement-item, .job-item, .product-item, .message-item {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s;
+}
+
+.item:last-child, .article-item:last-child, .service-item:last-child,
+.creator-item:last-child, .event-item:last-child, .networking-item:last-child,
+.achievement-item:last-child, .job-item:last-child, .product-item:last-child,
+.message-item:last-child {
+    border-bottom: none;
+}
+
+.item:hover, .article-item:hover, .service-item:hover,
+.creator-item:hover, .event-item:hover, .networking-item:hover,
+.achievement-item:hover, .job-item:hover, .product-item:hover,
+.message-item:hover {
+    background-color: #f5f5f5;
+}
+
+/* Team section */
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team-member {
+    flex: 1 1 200px;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.team-member img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.team-member h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #007BFF;
+}
+
+.team-member p {
+    margin: 0;
+    color: #666;
+}
+
+/* Testimonials section */
+.testimonials-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial {
+    max-width: 600px;
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #f5f7fa;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    animation: fadeInUp 1s ease-out;
+}
+
+.testimonial p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.testimonial cite {
+    display: block;
+    margin-top: 10px;
+    font-style: normal;
+    color: #666;
+}
+
+/* FAQ section */
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    font-size: 1.5em;
+    color: #007BFF;
+    cursor: pointer;
+    margin: 0;
+}
+
+.faq-item p {
+    display: none;
+    margin-top: 10px;
+    color: #666;
+}
+
+.faq-item.active p {
+    display: block;
+}
+
+/* Contact section */
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #f5f7fa;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes rainbow {
+    0% { background: linear-gradient(135deg, #f5f7fa, #c3cfe2); }
+    25% { background: linear-gradient(135deg, #ff9a9e, #fecfef); }
+    50% { background: linear-gradient(135deg, #ff9a9e, #fad0c4); }
+    75% { background: linear-gradient(135deg, #fbc2eb, #a6c1ee); }
+    100% { background: linear-gradient(135deg, #cfd9df, #e2ebf0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .trending-articles, .popular-services, .featured-creators, .upcoming-events,
+    .networking-list, .achievements-list, .job-listings, .service-listings,
+    .product-listings, .message-list, .career-highlights-list, .personal-reflections-list,
+    .professional-reflections-list, .industry-experience-list, .personal-achievements-list,
+    .user-goals-list, .professional-goals-list, .professional-summary-list, .community-highlights-list,
+    .client-feedback-list, .career-milestones-list, .colab-listings, .cohort-list {
+        width: 100%;
+    }
+
+    .team-members {
+        flex-direction: column;
+    }
+
+    .team-member {
+        margin-bottom: 20px;
+    }
+}
+
+/* Hidden sections */
+.hidden {
+    display: none;
+}
+
+/* Dropdown menu styles */
+.dropdown {
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.dropdown ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown ul li {
+    padding: 10px 20px;
+}
+
+.dropdown ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown ul li a:hover {
+    background-color: #f5f5f5;
+}
